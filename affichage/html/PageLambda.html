@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Keep All In One</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="icon" type="image/png" href="images/Logo.png" />
+	<meta name="description" content="Keep All In One, Agrégateur de flux, Aaron">
+	<meta name="keywords" content="actualité, blog, connexion, favoris, articles, Keep All In One, Aaron">
+	<meta name="author" content="Mathieu Martinez, Maxime Martinez, Jean-Adam Puskaric, Raphael Ostrov">
+	<script type="text/javascript" src="Js/afficher_cacher_div.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="Js/iscroll.js"></script>
+	<script type="text/javascript">
+	function loaded() {
+		myScroll = new IScroll('#wrapper', {
+			mouseWheel: true,
+			scrollbars: 'custom'
+		});
+		afficher_cacher('article1'); // C'est pour cacher les articles afin qu'ils ne soient pas visible quand on charge la page
+		$("a[href='#top']").click(function() {
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			return false;
+		});
+	}
+	</script>
+</head>
+<body onload="loaded()">
+	<div id="header">
+		<div id="wrapper-header">
+			<p>Bonjour Cancerino,</p><div id="wrapper-compte"><a class="compte" href="#" ></a> <a class="deco" href="#" ></a></div> <!-- Cancerino = pseudo du gars -->
+		</div>
+	</div>
+	<div id = "conteneur-logo" >
+		<img src="images/Logo2.png" alt="Logo" title="Keep All In One">
+	</div>
+	<nav>
+		<div id ="espace-haut"></div>
+		<ul>
+			<li class= "boutton-espace"><a class = "menu-boutton actif" href="#"><p>Actualités</p></a></li>
+			<li class= "boutton-espace"><a class = "menu-boutton" href="#"><p>Mon blog</p></a></li>
+			<li class= "boutton-espace"><a class = "menu-boutton" href="#"><p>Mes favoris</p></a></li>
+			<li><a class = "menu-boutton" href="#"><p>Ma messagerie</p></a></li>
+		</ul>
+		<hr class= "menu-division" >
+		<ul>
+			<li><a class = "menu-boutton" id = "boutton-sources" href="#"><p>Mes sources</p></a></li>
+		</ul>
+		<div id="wrapper">
+			<div id="scroller">
+			<ol>
+				<li class="sources"><a class = "liste-sources-favoris" href="#"><p> ♥ Test1</p></a></li>
+				<li class="sources"><a class = "liste-sources-favoris" href="#"><p> ♥ TestCancerino</p></a></li>
+				<li class="sources"><a class = "liste-sources-favoris" href="#"><p> ♥ TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources-favoris" href="#"><p> ♥ TestCancer</p></a></li>
+				<li class="sources"><a class = "liste-sources-favoris" href="#"><p> ♥ TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestCancerino</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>MaximeCancer</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>RaphaelNoob</p></a></li>
+				<li class="sources"><a class = "liste-sources" href="#"><p>TestYoloSwag</p></a></li>
+			</ol>
+			</div>
+		</div>
+	</nav>
+	<div id = "fond" >
+		<div id = "contenu" >
+			<br/>
+			<h1> Actualités </h1> <br/>
+			<h3> x nouveaux articles </h3> <!-- x à déterminer en php-->
+			<div class = "articles favoris" onclick="javascript:afficher_cacher('idarticle');" >
+				<h2> ♥ Xboxygen.com, il y a x heures </h2> <!-- Le coeur pour signifier que c'est favoris faut l'écrire en html ez-->
+				<img class= "image-article" src="images/Background.png" alt="article" title="Image article">
+				<div class = "article">
+					<h4> Un article assez cancer qui n'est pas liké </h4> <!-- C'est orange si on a liké -->
+					<p class = "texte"> Du texte cancer à remplacer par environ les 200 premiers caractères de merde, là je sais pas quoi dire donc ca va être un article court.
+					 donc bon joyeux noel et toussa toussa j'ai encore de la place en fait donc cava oklm je peux dire encore de la merde, pour lire la suite faut cliquer mon gars...</p>
+					<p><i><span class="idv">x</span> ont partagé </i></p> <!-- C'est orange si on a liké, x à déterminer -->
+				</div>
+			</div>
+			<div class = "articles favoris" onclick="javascript:afficher_cacher('idarticle');" >
+				<h2> ♥ Xboxygen.com, il y a x heures </h2> <!-- x à déterminer en php -->
+				<img class= "image-article" src="images/Background.png" alt="article" title="Image article">
+				<div class = "article">
+					<h4> Un article assez cancer qui n'est pas liké </h4> <!-- C'est orange si on a liké -->
+					<p class = "texte"> Du texte cancer à remplacer par environ les 200 premiers caractères de merde, là je sais pas quoi dire donc ca va être un article court.
+					 n joyeux noel et toussa toussa j'ai encore de la place en fait donc cava oklm je peux dire encore de la merde, pour lire la suite faut cliquer mon gars...</p>
+					<p><i><span class="idw">x</span> ont partagé </i></p> <!-- C'est orange si on a liké, x à déterminer -->
+				</div>
+			</div>
+			<div class = "articles"  onclick="javascript:afficher_cacher('article1');">
+				<h2>LeMonde.fr, il y a x heures </h2> <!-- x à déterminer en php -->
+				<img class= "image-article" src="images/Test.png" alt="article" title="Image article">
+				<div class = "article">
+					<h4> Un article assez cancer qui n'est pas liké </h4> <!-- C'est orange si on a liké -->
+					<p class = "texte"> Du texte cancer à remplacer par environ les 200 premiers caractères de l'article c'est juste pour donner un avant gout cancer
+					je sais pas quoi dire ok c'est cool oui oui ceci est un texte inutile etc etc bon voilà c'est à peu près tout mais c'est pas encore assez 
+					long donc bon joyeux noel et toussa toussa j'ai encore de la place en fait donc cava oklm je peux dire encore de la merde, pour lire la suite faut cliquer mon gars...</p>
+				<p><i><span class="idx">x</span> ont partagé </i></p> <!-- C'est orange si on a liké, x à déterminer; idx c'est la class du span ( c'est id plus l'id de l'article, c'est une classe car on a 2 spans -->
+				</div>
+			</div>
+			<div class="article-complet" id="article1">
+				
+				<h1> Rauracum ventum est ad supercilia fluminis Rheni </h1>
+				<br/>
+				<p>Accenderat super his incitatum propositum ad nocendum aliqua mulier vilis, quae ad palatium ut poposcerat intromissa insidias ei latenter obtendi prodiderat a militibus obscurissimis. quam Constantina exultans ut in tuto iam locata mariti salute muneratam vehiculoque inpositam per regiae ianuas emisit in publicum, ut his inlecebris alios quoque ad indicanda proliceret paria vel maiora.</p>
+				<br/>
+				<p>Cumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus <a href="#">Zenonem illum veterem Stoicum</a> qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.</p>
+				<br/>
+				<p>Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.</p>
+				<br/>
+				<h3>Vocabulis termino igitur culpasse his.</h3>
+				<br/>
+				<p>Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.</p>
+				<br/>
+				<p>Emensis itaque difficultatibus multis et nive obrutis callibus plurimis ubi prope Rauracum ventum est ad supercilia fluminis Rheni, resistente multitudine Alamanna pontem suspendere navium conpage Romani vi nimia vetabantur ritu grandinis undique convolantibus telis, et cum id inpossibile videretur, imperator cogitationibus magnis attonitus, quid capesseret ambigebat.</p>
+				<br/>
+				<p>Hacque adfabilitate confisus cum eadem postridie feceris, ut incognitus haerebis et repentinus, hortatore illo hesterno clientes numerando, qui sis vel unde venias diutius ambigente agnitus vero tandem et adscitus in amicitiam si te salutandi adsiduitati dederis triennio indiscretus et per tot dierum defueris tempus, reverteris ad paria perferenda, nec ubi esses interrogatus et quo tandem miser discesseris, aetatem omnem frustra in stipite conteres summittendo.</p>
+				<br/>
+				<p>Post quorum necem nihilo lenius ferociens Gallus ut leo cadaveribus pastus multa huius modi scrutabatur. quae singula narrare non refert, me professione modum, quod evitandum est, excedamus.</p>
+				<br/>
+				<p>Ideoque fertur neminem <strong>aliquando ob haec vel similia poenae addictum oblato de more elogio revocari iussisse, quod inexorabiles quoque principes factitarunt.</strong> et exitiale hoc vitium, quod in aliis non numquam intepescit, in illo aetatis progressu effervescebat, obstinatum eius propositum accendente adulatorum cohorte.</p>
+				<br/>
+				<p>Ex turba vero imae sortis et paupertinae in tabernis aliqui pernoctant vinariis, non nulli velariis umbraculorum theatralium latent, quae Campanam imitatus lasciviam Catulus in aedilitate sua suspendit omnium primus; aut pugnaciter aleis certant turpi sono fragosis naribus introrsum reducto spiritu concrepantes; aut quod est studiorum omnium maximum ab ortu lucis ad vesperam sole fatiscunt vel pluviis, per minutias aurigarum equorumque praecipua vel delicta scrutantes.</p>
+				<br/>
+				<p>Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur.</p>
+				<br/>
+				<p>Primi igitur omnium statuuntur <i>Epigonus et Eusebius</i> ob nominum gentilitatem oppressi. praediximus enim Montium sub ipso vivendi termino his vocabulis appellatos fabricarum culpasse tribunos ut adminicula futurae molitioni pollicitos.</p>
+				<br/>
+				<div class="footer-article-wrapper">
+					<div class="permalien" >
+						<a href="#">Lien permanent </a> 
+					</div>
+					<!--				
+					$articles = recup_articles();
+					foreach($articles as $article)
+					{
+						echo '<div class= "wrapper-jaime" ><p>' . $article['article'] . "<div class=\"".$article['id_article']."\">Partager</div>(<span class= \"id".$article['id_article']."\">".$article['jaime']. '</span>) ont partagé</p> </div>';
+					}
+					-->
+					<div class="wrapper-jaime">
+						<div>Partager</div> <span class=idx>0</span><p> ont partagé</p>
+					</div>
+				</div>
+			</div>
+			<div class = "articles" onclick="javascript:afficher_cacher('idarticle');" >
+				<h2> LeMonde.fr, il y a x heures </h2> <!-- x à déterminer en php -->
+				<img class= "image-article" src="images/Test2.png" alt="article" title="Image article">
+				<div class = "article" >
+					<h4 class="like"> Un article assez cancer mais liké </h4> <!-- C'est orange si on a liké -->
+					<p class = "texte"> Du texte cancer à remplacer par environ les 200 premiers caractères de l'article c'est juste pour donner un avant gout cancer
+					je sais pas quoi dire ok c'est cool oui oui je change un peu ce que j'écris parce que sinon c'est toujours pareil donc bon mais c'est pas encore assez 
+					long donc bon joyeux noel et toussa toussa j'ai encore de la place en fait donc cava oklm je peux dire encore de la merde, pour lire la suite faut cliquer mon gars...</p>
+					<p class="like"><i><span class="idy">x</span> ont partagé </i></p> <!-- C'est orange si on a liké, x à déterminer -->
+				</div>
+			</div>
+			<h5>Il y a plus d'un jour </h5>
+			<div class = "articles favoris" onclick="javascript:afficher_cacher('idarticle');" >
+				<h2> ♥ Xboxygen.com, il y a x jours </h2> <!-- x à déterminer en php -->
+				<img class= "image-article" src="images/Background.png" alt="article" title="Image article">
+				<div class = "article">
+					<h4> Un article assez cancer qui n'est pas liké </h4> <!-- C'est orange si on a liké -->
+					<p class = "texte"> Du texte cancer à remplacer par environ les 200 premiers caractères de merde, là je sais pas quoi dire donc ca va être un article court.
+					(comme ta bite) donc bon joyeux noel et toussa toussa j'ai encore de la place en fait donc cava oklm je peux dire encore de la merde, pour lire la suite faut cliquer mon gars...</p>
+					<p><i><span class="idz">x</span> ont partagé </i></p> <!-- C'est orange si on a liké, x à déterminer -->
+				</div>
+			</div>
+			<div id="plus"> <h5> + <br/> Charger plus d'articles </h5></div>
+		</div>
+	</div>
+	<div id = "footer">
+		<a id="ancre" href="#top">Retourner en haut de page</a>
+		<p>Version 2.3</p>
+		<p>Copyright © 2014 PUSKARIC Jean-Adam, MARTINEZ Mathieu, MARTINEZ Maxime, OSTROV Raphaël, Design PUSKARIC Jean-Adam</p>
+		<p class="footer">
+			<img  src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+			<img  src="images/HTML5Valide.png" alt="html5 Valide !" /> <!-- C'est un montage car le vrai n'existe pas pour le HTML -->
+		</p>
+	</div>
+</body>
+</html>
